@@ -248,7 +248,7 @@ $user = $get->result->username;
 $id = $get->result->id;
 $name = $get->result->first_name;
 
-$gett = json_decode(file_get_contents("https://api.telegram.org/bot".$tx."/setwebhook?url=https://github.com/new/$tekk/$nom"));
+$gett = json_decode(file_get_contents("https://api.telegram.org/bot".$tx."/setwebhook?url=https://kkoderoff.xvest.ru/Xost/$tekk/$nom"));
 $ok = $gett->ok;
 if($ok){
 bot('sendMessage',[
