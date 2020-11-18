@@ -59,7 +59,6 @@ function sendphoto($chat_id, $photo, $action){
         }
         return array_map("objectToArrays", $object);
     }
-
 	//======ᴏᴍᴀʀ ʜᴀѕʜᴍ ‏ ⌯┆-‏𖤍=========//
 $update = json_decode(file_get_contents('php://input'));
 $message = $update->message;
@@ -81,7 +80,7 @@ if($text == "/start"){
 if (!file_exists("data/$from_id/ali.txt")) {
         mkdir("data/$from_id");
         file_put_contents("data/$from_id/ali.txt","none");
-        $myfile2 = fopen("ali.txt", "a") or die("Unable to open file!");
+        $myfile2 = fopen("Member.txt", "a") or die("Unable to open file!");
         fwrite($myfile2, "$from_id\n");
         fclose($myfile2);
     }
@@ -89,7 +88,7 @@ if (!file_exists("data/$from_id/ali.txt")) {
         sendAction($chat_id, 'typing');
 	bot('sendmessage',[
 	'chat_id'=>$chat_id,
-	'text'=>"Assalom Alaykum! @WebGostbot ga Hush Kelibsiz! Kerakli bo’limni tanlang:",
+	'text'=>"Assalom Alaykum! @WebHooklash_bot ga Hush Kelibsiz! Kerakli bo’limni tanlang:",
               	'reply_markup'=>json_encode([
 	'resize_keyboard'=>true,
 	'keyboard'=>[
@@ -99,20 +98,6 @@ if (!file_exists("data/$from_id/ali.txt")) {
 	])
 	]);
 	}
-if($tx=="/start" and $type=="private"){
-file_put_contents("data/$from_id/ali.txt","to");
-$ret = bot("getChatMember",[
-         "chat_id"=>"-1001428889614",
-         "user_id"=>$cid,
-         ]);
-$stat = $ret->result->status;
-$rets = bot("getChatMember",[
-         "chat_id"=>"-1001475526986",
-         "user_id"=>$chat_id2,
-         ]);
-$stats = $rets->result->status;
-{
-
 elseif($text == "🏠 Bosh Menyu"){
 file_put_contents("data/$from_id/ali.txt","no");
 file_put_contents("data/$from_id/token.txt","no");
