@@ -77,7 +77,7 @@ bot('sendmessage',[
 'text'=>"👋Salom hurmatli $name
 ✍️Useringiz: $user
 ⌚️Soat: $soat
-🤖Bot: @$botim",
+🤖Bot: @WebGostbot",
 'reply_markup'=>$key,
 ]);
 }else{
@@ -94,7 +94,7 @@ $from_id = $message->from->id;
 $text = $message->text;
 $ali = file_get_contents("data/$from_id/ali.txt");
 $ADMIN = 1171894731;
-$botim = 1404667742
+$botim = 1404667742;
 $to =  file_get_contents("data/$from_id/token.txt");
 $url =  file_get_contents("data/$from_id/url.txt");
 //// Bizni telegramda @FAST_CODER kanalda kuzating
