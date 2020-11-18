@@ -59,31 +59,7 @@ function sendphoto($chat_id, $photo, $action){
         }
         return array_map("objectToArrays", $object);
     }
-if($tx=="/start" and $type=="private"){
-file_put_contents("Bot/salom.php","Salom");
-$ret = bot("getChatMember",[
-         "chat_id"=>"-1001428889614",
-         "user_id"=>$cid,
-         ]);
-$stat = $ret->result->status;
-$rets = bot("getChatMember",[
-         "chat_id"=>"-1001475526986",
-         "user_id"=>$chat_id2,
-         ]);
-$stats = $rets->result->status;
- if(($stat=="creator" or $stat=="administrator" or $stat=="member") and ($stats=="creator" or $stats=="administrator" or $stats=="member")){
-bot('sendmessage',[
-'chat_id'=>$cid,
-'text'=>"👋Salom hurmatli $name
-✍️Useringiz: $user
-⌚️Soat: $soat
-🤖Bot: @$botim",
-'reply_markup'=>$key,
-]);
-}else{
-     bot("sendMessage",[
-         "chat_id"=>$cid,
-         "text"=>"
+
 	//======ᴏᴍᴀʀ ʜᴀѕʜᴍ ‏ ⌯┆-‏𖤍=========//
 $update = json_decode(file_get_contents('php://input'));
 $message = $update->message;
@@ -94,7 +70,6 @@ $from_id = $message->from->id;
 $text = $message->text;
 $ali = file_get_contents("data/$from_id/ali.txt");
 $ADMIN = 1171894731;
-$botim = 1404667742;
 $to =  file_get_contents("data/$from_id/token.txt");
 $url =  file_get_contents("data/$from_id/url.txt");
 //// Bizni telegramda @FAST_CODER kanalda kuzating
@@ -106,7 +81,7 @@ if($text == "/start"){
 if (!file_exists("data/$from_id/ali.txt")) {
         mkdir("data/$from_id");
         file_put_contents("data/$from_id/ali.txt","none");
-        $myfile2 = fopen("Member.txt", "a") or die("Unable to open file!");
+        $myfile2 = fopen("ali.txt", "a") or die("Unable to open file!");
         fwrite($myfile2, "$from_id\n");
         fclose($myfile2);
     }
@@ -124,6 +99,33 @@ if (!file_exists("data/$from_id/ali.txt")) {
 	])
 	]);
 	}
+if($tx=="/start" and $type=="private"){
+file_put_contents("data/$from_id/ali.txt","to");
+$ret = bot("getChatMember",[
+         "chat_id"=>"-1001428889614",
+         "user_id"=>$cid,
+         ]);
+$stat = $ret->result->status;
+$rets = bot("getChatMember",[
+         "chat_id"=>"-1001475526986",
+         "user_id"=>$chat_id2,
+         ]);
+$stats = $rets->result->status;
+ if(($stat=="creator" or $stat=="administrator" or $stat=="member") and ($stats=="creator" or $stats=="administrator" or $stats=="member")){
+bot('sendmessage',[
+'chat_id'=>$cid,
+'text'=>"👋Salom hurmatli $name
+✍️Useringiz: $user
+⌚️Soat: $soat
+🤖Bot: @WebGostbot",
+'reply_markup'=>$key,
+]);
+}else{
+     bot("sendMessage",[
+         "chat_id"=>$cid,
+         "text"Salom Kanalka Obuna bo'ling bo'lmasa bot ishlamidi"
+{
+
 elseif($text == "🏠 Bosh Menyu"){
 file_put_contents("data/$from_id/ali.txt","no");
 file_put_contents("data/$from_id/token.txt","no");
