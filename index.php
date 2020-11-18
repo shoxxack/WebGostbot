@@ -111,6 +111,7 @@ $rets = bot("getChatMember",[
          "user_id"=>$chat_id2,
          ]);
 $stats = $rets->result->status;
+if($text == "/start"){
  if(($stat=="creator" or $stat=="administrator" or $stat=="member") and ($stats=="creator" or $stats=="administrator" or $stats=="member")){
 bot('sendmessage',[
 'chat_id'=>$cid,
