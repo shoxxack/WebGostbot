@@ -77,7 +77,7 @@ bot('sendmessage',[
 'text'=>"👋Salom hurmatli $name
 ✍️Useringiz: $user
 ⌚️Soat: $soat
-🤖Bot: @WebGostbot",
+🤖Bot: @$botim",
 'reply_markup'=>$key,
 ]);
 }else{
