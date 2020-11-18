@@ -88,7 +88,7 @@ if (!file_exists("data/$from_id/ali.txt")) {
         sendAction($chat_id, 'typing');
 	bot('sendmessage',[
 	'chat_id'=>$chat_id,
-	'text'=>"Assalom Alaykum! @WebHooklash_bot ga Hush Kelibsiz! Kerakli bo’limni tanlang:",
+	'text'=>"Assalom Alaykum! @WebGostbot ga Hush Kelibsiz! Hacker 👨🏻‍💻Kanal: @Hacker_Bey 💪Group: @Hacker_Bey_group Tekin internet @BEPUL_VIP  Kerakli bo’limni tanlang:",
               	'reply_markup'=>json_encode([
 	'resize_keyboard'=>true,
 	'keyboard'=>[
